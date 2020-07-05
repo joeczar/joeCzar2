@@ -1,8 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `JoeCzar - Developer`,
+    author: {
+      name: `Joe Czarnecki`,
+      summary: `An autodidact because I have to be. Currently a Web Developer living in Berlin. Formerly, Digital Education Program Developer for Save the Children Germany, a Media Educator, an English Teacher, and a Musician.`,
+    },
+    description: `Contact and Portfolio site.`,
+    siteUrl: `https://joeczar.com/`,
+    social: {
+      twitter: `https://twitter.com/RollerDev`,
+      github: `https://github.com/joeczar`,
+      linkedIn: `https://www.linkedin.com/in/joe-czarnecki-berlin/`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +20,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `static`,
+        path: `${__dirname}/src/static`,
       },
     },
     `gatsby-transformer-sharp`,

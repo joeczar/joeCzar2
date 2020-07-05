@@ -1,0 +1,15 @@
+.homeWrapper {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  color: #a4d7d0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header h1,
+.header h2 {
+  margin: 0.5em auto auto auto;
+}

@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  margin: auto;
+  align-self: center;
+  align-items: center;
+}
+.links {
+  display: flex;
+  margin: auto;
+  color: #551a8b;
+}
+.socialIcons {
+  height: 6em;
+  width: 6em;
+  stroke-width: 1;
+  margin: auto 2em;
+  -webkit-animation: buzz 0.005s infinite;
+  animation: buzz 0.005s infinite;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+  .socialIcons {
+    height: 4em;
+    width: 4em;
+    stroke-width: 1;
+    margin: auto 1em;
+  }
+  .links {
+  }
+  a {
+    display: block;
+  }
+}
+
+@-webkit-keyframes buzz {
+  77% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes buzz {
+  77% {
+    opacity: 0.7;
+  }
+}

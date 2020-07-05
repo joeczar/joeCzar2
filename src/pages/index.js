@@ -1,22 +1,23 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import JoeCzar from "../components/joeCzarNeon"
+// import { Link, graphql } from "gatsby"
+import Social from "../components/social"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+import styles from "./index.module.css"
+
+const LandingPage = ({ data, location }) => {
+  //  const siteTitle = data.site.siteMetadata.title
+  return (
+    <div className={styles.homeWrapper}>
+      <SEO title="JoeCzar | Developer" />
+      <header className={styles.header}>
+        <h1>Joe Czarnecki</h1>
+        <h2>Developer</h2>
+      </header>
+      <JoeCzar height="100%" />
+      <Social />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
-
-export default IndexPage
+  )
+}
+export default LandingPage

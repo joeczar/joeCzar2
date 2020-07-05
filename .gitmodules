@@ -1,0 +1,3 @@
+[submodule "src/static/projects"]
+	path = src/static/projects
+	url = https://github.com/joeczar/projects.git
